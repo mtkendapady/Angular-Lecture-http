@@ -7,10 +7,22 @@
     <!-- http://getbootstrap.com/getting-started/ -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJtE" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body ng-controller="homeCtrl">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <i class="fa fa-glide fa-2x" aria-hidden="true"></i> iphyniss
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <main class="wrapper">
         <div class="container">
             <div class="row">
@@ -41,7 +53,8 @@
                     </form>
                 </div>
                 <div class="col-md-8">
-                    <img ng-src="{{gifData}}"><br>
+                    <img ng-src="{{gifData}}">
+                    <br>
                     <button class="btn btn-default btn-lg top-margin" ng-click="copyToClipboard()" ng-show="IsVisible">copy</button>
                 </div>
             </div>
@@ -51,6 +64,24 @@
 
         </div>
     </main>
+
+    <footer class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-text col-md-5 pull-left">
+                    <i class="fa fa-code fa-lg"></i> with <i class="fa fa-heart fa-lg"></i> by <b><a href="https://github.com/McKmillions">Zach McKimmins</a></b>
+                </div>
+                <div class="fb-like col-md-4 pull-left" data-share="true" data-width="450" data-show-faces="true">
+                </div>
+                <div class="navbar-text col-md-5 pull-right">
+                    <span class="fa-stack fa-lg pull-right">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-glide-g fa-stack-1x"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- angular 1.5.8 -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>

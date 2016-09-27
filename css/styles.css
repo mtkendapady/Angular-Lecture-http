@@ -14,3 +14,30 @@ html, body {
 .top-margin {
   margin-top: 5px;
 }
+
+nav {
+  height: 70px;
+  padding-left: 35px;
+}
+
+footer .navbar-text {
+  font-size: 2rem;
+  color: #fff !important;
+  line-height: 2em;
+}
+
+footer a {
+  color: #fff;
+}
+
+.fa-code {
+  color: #2AABE2;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.fa-glide-g {
+  color: #000;
+}
