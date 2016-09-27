@@ -1,5 +1,5 @@
 angular.module( "giphySearch" )
-	.controller( "homeCtrl", function( $scope, gifService ) {
+	.controller( "homeCtrl", function( $scope, starwarsService, gifService ) {
 
 		$scope.test = "test";
 
@@ -9,7 +9,13 @@ angular.module( "giphySearch" )
 			$scope.IsVisible = $scope.IsVisible ? false : true;
 		};
 
-		// Example 1
+    starwarsService.getSW()
+        .then( function( response ) {
+          console.log( response );
+          $scope.swdata = response.data;
+        } )
+
+		// Example 2
 		$scope.getGiphData = function() {
 			gifService.getData( $scope.searchEx1 )
 				.then( function( returnedGif ) {
@@ -18,15 +24,33 @@ angular.module( "giphySearch" )
 				} );
 		};
 
-		// Example 2
-		$scope.getGiphy = function() {
+		// Example 2 (With Notes)
+    $scope.getGiphy = function() {
+			// This service's function returns a promise
 			gifService.getGiphy( $scope.searchEx2 )
+				// then() called when son gets back
 				.then( function( response ) {
+					// promise fulfilled
 					console.log( response )
 					$scope.gifData = response.data.fixed_height_downsampled_url;
 					$scope.searchEx2 = "";
-				} )
-		}
+				}, function( error ) {
+					// promise rejected, could log the error);
+					console.log( 'error', error );
+				} );
+		};
+
+    // Example 2 (Without Notes)
+		// $scope.getGiphy = function() {
+		// 	gifService.getGiphy( $scope.searchEx2 )
+		// 		.then( function( response ) {
+		// 			console.log( response )
+		// 			$scope.gifData = response.data.fixed_height_downsampled_url;
+		// 			$scope.searchEx2 = "";
+		// 		}, function( error ) {
+		// 			console.log( 'error', error );
+		// 		} );
+		// };
 
 		// Copies Gif URL to clipboard
 		$scope.copyToClipboard = function( url ) {

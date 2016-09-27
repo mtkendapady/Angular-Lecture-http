@@ -30,6 +30,11 @@ footer a {
   color: #fff;
 }
 
+footer a:hover {
+  color: red;
+  text-decoration: none;
+}
+
 .fa-code {
   color: #2AABE2;
 }

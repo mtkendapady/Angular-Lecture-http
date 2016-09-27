@@ -25,6 +25,19 @@
 
     <main class="wrapper">
         <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <p>Star Wars</p>
+                  Title: {{swdata.title}}
+              		<br>
+              		Opening Crawl: {{swdata.opening_crawl}}
+              </div>
+              <div class="col-md-8">
+                  <img class="copy-this" ng-src="{{giphData}}">
+                  <!-- <button class="copy-me">copy</button> -->
+              </div>
+          </div>
+          <hr />
             <div class="row">
                 <div class="col-md-4">
                     <p>Example 1</p>
@@ -88,6 +101,7 @@
     <script src="src/app.js"></script>
     <script src="src/homeCtrl.js"></script>
     <script src="src/gifSrvc.js"></script>
+    <script src="src/swSrvc.js"></script>
 </body>
 
 </html>
