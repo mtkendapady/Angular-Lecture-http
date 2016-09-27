@@ -1,0 +1,16 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	width: 100%;
+  margin-top: 50px;
+}
+
+.top-margin {
+  margin-top: 5px;
+}
