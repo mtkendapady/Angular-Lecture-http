@@ -12,14 +12,15 @@ angular.module( "giphySearch" )
     starwarsService.getSW()
         .then( function( response ) {
           console.log( response );
-          $scope.swdata = response.data;
+          $scope.swdata = response;
         } )
 
 		// Example 2
 		$scope.getGiphData = function() {
 			gifService.getData( $scope.searchEx1 )
 				.then( function( returnedGif ) {
-					$scope.giphData = returnedGif.data.data.fixed_height_downsampled_url;
+          console.log(returnedGif)
+					$scope.giphData = returnedGif.fixed_height_downsampled_url;
 					$scope.searchEx1 = "";
 				} );
 		};
