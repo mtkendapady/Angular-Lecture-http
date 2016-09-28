@@ -1,0 +1,39 @@
+nav {
+  height: 70px;
+  padding-left: 35px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+
+footer .navbar-text {
+  font-size: 2rem;
+  color: #fff !important;
+  line-height: 2em;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.fa-code {
+  color: #2AABE2;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.fa-glide-g {
+  color: #000;
+}
